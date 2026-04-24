@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Registration Form</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .box {
+            background: white;
+            padding: 25px;
+            width: 400px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px #aaa;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
+
+        .gender {
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            background: green;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: darkgreen;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+    <h2>User Registration</h2>
+
+    <form action="submit.php" method="POST">
+
+        <label>Name</label>
+        <input type="text" name="name" required>
+
+        <label>Email</label>
+        <input type="email" name="email" required>
+
+        <label>Website</label>
+        <input type="text" name="website">
+
+        <label>Comment</label>
+        <textarea name="comment" rows="4"></textarea>
+
+        <label>Gender</label>
+        <div class="gender">
+            <input type="radio" name="gender" value="Male" required> Male
+            <input type="radio" name="gender" value="Female"> Female
+            <input type="radio" name="gender" value="Other"> Other
+        </div>
+
+        <button type="submit" class="btn">Submit</button>
+
+    </form>
+</div>
+
+</body>
+</html>
